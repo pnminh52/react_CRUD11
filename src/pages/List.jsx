@@ -6,59 +6,63 @@ const List = (props) => {
   return (
     <>
       <div>
+        <h1 className="font-bold text-2xl ml-32">List Product</h1>
         <Link to={`/products/add`}>
-          <button className="bg-green-500 text-white font-bold px-4 py-2 rounded-md mt-4 ml-64">
+          <button className="ml-32 mt-2 px-4 py-2 bg-green-500 text-white font-bold border border-green-500 rounded-md">
             Add product
           </button>
         </Link>
-        <div className="overflow-x-auto  mt-4 px-64">
-          <table className=" min-w-full table-auto border-collapse border border-black">
+        <div>
+          <table className="border border-black ml-32 mt-4">
             <thead>
-              <tr className="bg-gray-100">
-                <td className="px-4 py-2 border  border-gray-300 text-center">
-                  name
+              <tr className="bg-gray-200">
+                <td className="text-center border border-black px-8 py-2 text-lg font-bold">
+                  {" "}
+                  Name
                 </td>
-                <td className="px-4 py-2 border border-gray-300 text-center">
-                  price
+                <td className="text-center border border-black px-8 py-2 text-lg font-bold">
+                  Price
                 </td>
-                <td className="px-4 py-2 border border-gray-300 text-center">
-                  image
+                <td className="text-center border border-black px-8 py-2 text-lg font-bold">
+                  Image
                 </td>
-                <td className="px-4 py-2 border border-gray-300 text-center">
-                  description
+                <td className="text-center border border-black px-8 py-2 text-lg font-bold">
+                  Description
                 </td>
-                <td className="px-4 py-2 border border-gray-300 text-center">
-                  action
+                <td className="text-center border border-black px-8 py-2 text-lg font-bold">
+                  {" "}
+                  Action
                 </td>
               </tr>
             </thead>
             <tbody>
               {products.map((product) => {
                 return (
-                  <tr key={product.id}>
-                    <td className="px-4 py-2 border text-center border-gray-300">
+                  <tr>
+                    <td className="text-center border border-black px-8 py-2">
                       {product.name}
                     </td>
-                    <td className="px-4 py-2 border text-center border-gray-300">
+                    <td className="text-center border border-black px-8 py-2">
                       {product.price}
                     </td>
-                    <td className="px-4 py-2 border border-gray-300">
-                      <img className=" w-32" src={product.img} alt="" />
+                    <td className="text-center border border-black px-8 py-2">
+                      <img src={product.img} alt="" />
                     </td>
-                    <td className=" px-4 py-2 text-center border border-gray-300">
+                    <td className="text-center border border-black px-8 py-2">
                       {product.des}
                     </td>
-                    <td className="px-4 py-2 text-center border border-gray-300">
+                    <td className="text-center border border-black px-8 py-2">
                       <button
-                        className="bg-red-500 mr-4 text-white font-bold px-4 py-2 rounded-md"
+                        className="mt-2 mr-2 px-4 py-2 bg-red-500 text-white font-bold  rounded-md"
                         onClick={() => onDel(product.id)}
                       >
                         Delete
                       </button>
-                      <Link to={`/products/${product.id}/update`}>
-                        <button className="bg-indigo-500 text-white font-bold px-4 py-2 rounded-md">
-                          Update
-                        </button>
+                      <Link
+                        className="mt-2 px-4 py-2 bg-indigo-500 text-white font-bold  rounded-md"
+                        to={`/products/${product.id}/update`}
+                      >
+                        <button>Update</button>
                       </Link>
                     </td>
                   </tr>

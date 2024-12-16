@@ -27,6 +27,20 @@
       "price": "1000",
       "des": "qqqqq",
       "img": "https://picsum.photos/200/300"
+    },
+    {
+      "id": "c788",
+      "name": "new update",
+      "price": "1000",
+      "des": "qqqqq",
+      "img": "https://picsum.photos/200/300"
+    },
+    {
+      "id": "376f",
+      "name": "Product test key",
+      "price": "1000",
+      "des": "qqqqq",
+      "img": "https://picsum.photos/200/300"
     }
   ]
 }
